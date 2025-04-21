@@ -20,4 +20,8 @@ export const createTodo = (res,req) =>
   res.status(201).json(newTodo)
 };
 
+export const getTodo = (res,req) =>
+{
+  
+}
 
