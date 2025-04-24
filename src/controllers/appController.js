@@ -1,27 +1,10 @@
-// hardcoded tasks and id;
+import pool from "../db/index.js"
 
-let todos = [];
-let cuurrentId = 1;
+export const getTodo = async(res, req) =>
+{
+  const { rows }  = await pool.query('SELECT * FROM todos ORDER by id');
+  res.json(rows);
 
-export const createTodo = (res,req) =>
-{
-  const {title} = req.body;
-  if(!title)
-{
-   return res.status(400).json({error : 'tile is required'});
 }
-  const newTodo = {
-    id:cuurrentId++;
-    title,
-    completed:false
-  }
 
-  todos.push(newTodo);
-  res.status(201).json(newTodo)
-};
-
-export const getTodo = (res,req) =>
-{
-  
-}
 
