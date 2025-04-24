@@ -1,5 +1,5 @@
-import express from express
-import todoRoutes from './routes/appRoutes.js';
+import express from 'express';
+import appRoutes from './routes/appRoutes.js';
 const app = express();
 const port = 3000;
 app.use(express.json());

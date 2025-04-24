@@ -1,0 +1,17 @@
+meta {
+  name: Create a Todo
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/todo
+  body: json
+}
+
+body:json {
+  {
+    "title": "Finish Bruno setup"
+  }
+}
+
